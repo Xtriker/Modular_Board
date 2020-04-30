@@ -1,0 +1,17 @@
+Partlist exported from /home/dario/EAGLE/projects/Stepper Driver 3A/Stepper Driver.sch at 14/04/20 01:35
+
+Qty Value           Device          Package         Parts  Description                   MF MPN    OC_FARNELL OC_NEWARK POPULARITY SPICEPREFIX
+1                   PINHD-1X2       1X02            JP1    PIN HEADER                                                   98                    
+1                   PINHD-1X8       1X08            JP3    PIN HEADER                                                   67                    
+2                   R-EU_R0805      R0805           R1, R2 RESISTOR, European symbol                                    86         R          
+2   0.2             R-EU_R2512      R2512           R3, R4 RESISTOR, European symbol                                    0          R          
+1   100             R-EU_R0805      R0805           R5     RESISTOR, European symbol                                    86         R          
+1   10k             R-EU_R0805      R0805           R6     RESISTOR, European symbol                                    86         R          
+2   1nF             C-EUC0805K      C0805K          C2, C3 CAPACITOR, European symbol                                   52         C          
+1   22k             R-EU_R0805      R0805           R7     RESISTOR, European symbol                                    86         R          
+1   3.3nF           C-EUC0805K      C0805K          C1     CAPACITOR, European symbol                                   52         C          
+1   GREEN           LED5MM          LED5MM          LED1   LED                                                          93                    
+1   L297            L297            DIL20           IC1    STEPPER MOTOR CONTROLLER         L297/1 1094209    56P8258   4                     
+1   L298            L298            MULTIWATT-15    IC2    DUAL FULL-BRIDGE DRIVER          L298N  1589425    32M1527   11                    
+1   MKDSN1,5/2-5,08 MKDSN1,5/2-5,08 MKDSN1,5/2-5,08 X2     MKDSN 1,5/ 2-5,08 Printklemme                                14                    
+1   MKDSN1,5/4-5,08 MKDSN1,5/4-5,08 MKDSN1,5/4-5,08 X1     MKDSN 1,5/ 4-5,08 Printklemme                                5                     

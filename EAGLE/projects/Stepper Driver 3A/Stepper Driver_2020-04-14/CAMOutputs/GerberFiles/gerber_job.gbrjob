@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2020-04-14T06:34:15Z",
+        "GenerationSoftware": {
+            "Application": "EAGLE",
+            "Vendor": "Autodesk",
+            "Version": "9.6.1"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.57,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "Stepper Driver"
+        },
+        "Owner": "Adrian Diaz <dario.diaz@alumno.udg.mx>",
+        "Size": {
+            "X": 49.51,
+            "Y": 50.7
+        }
+    }
+}
