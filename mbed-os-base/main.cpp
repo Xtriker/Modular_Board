@@ -20,14 +20,13 @@ float Feedrate = 0u;
 
 int main()
 {
-    
+    app_StepperMotorInitialState();
     while (true) {
         pc.printf("$: \n");
         pc.scanf("%d",&Velocidad);
         pc.scanf("%s",&Eje);
         //Feedrate = app_FeedrateConversions(Velocidad);
-        app_VelocidadMotor(Velocidad, Eje);
-        app_Movement(Eje, Derecha);
+        app_StepperMotorTask(Eje, Derecha, Distancia, Velocidad);
         thread_sleep_for(BLINKING_RATE_MS);
     }
 }
