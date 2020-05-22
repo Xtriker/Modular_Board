@@ -14,15 +14,12 @@ float Feedrate = 0u;
 // Blinking rate in milliseconds
 #define BLINKING_RATE_MS                                                    100
 
+
 int main()
 {
-    app_StepperMotorInitialState();
+    //app_StepperMotorInitialState();   
+    pc.printf("Movimiento del motor X");
     while (true) {
-        pc.printf("$: \n");
-        pc.scanf("%d",&Velocidad);
-        pc.scanf("%s",&Eje);
-        //Feedrate = app_FeedrateConversions(Velocidad);
-        app_StepperMotorTask(Eje, Derecha, Distancia, Velocidad);
-        thread_sleep_for(BLINKING_RATE_MS);
+        app_Distance('x',140,Izquierda,(uint8_t)500);
     }
 }

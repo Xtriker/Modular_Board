@@ -8,10 +8,8 @@
 
 /* Funciones externas */
 
-extern void app_VelocidadMotor(int Velocidad_Eje, char Eje);
-extern void app_Movement(char Eje, uint8_t Direccion);
-extern float app_FeedrateConversions(int Velocidad_Eje);
 extern void app_StepperMotorInitialState(void);
-extern void app_StepperMotorTask(char Eje, uint8_t Direccion,float Distancia,int Velocidad_Eje);
+extern void app_Distance(char Eje, uint8_t Distancia, uint8_t Direccion,uint8_t Tiempo);
+
 /* Variables externas */
 extern uint8_t Alarma;
