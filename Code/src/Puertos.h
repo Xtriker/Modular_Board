@@ -34,3 +34,5 @@
 
 #define Encoder1_Y_PIN          PTB8
 #define Encoder2_Y_PIN          PTB9
+
+/* Pines para el touch de la tarjeta */

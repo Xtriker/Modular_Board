@@ -2,10 +2,13 @@
 #include "Puertos.h"
 /* Funciones externas */
 
+/* Variables externas */
+extern uint8_t Alarma;
+
 extern void app_Endstop(void);
 
 /* Maquina de estados */
-
+/*
 typedef enum
 {
     NOPRESIONADO,
@@ -17,3 +20,4 @@ typedef enum{
     PARO,
     REINICIO
 }S_Endstop_EPR;
+*/

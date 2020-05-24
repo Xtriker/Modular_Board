@@ -1,5 +1,7 @@
 #include "mbed.h"
 #include "Puertos.h"
+#include "TSISensor.h"
+#include "app_Endstops.h"
 
 /* Definiciones */
 /* Direcion de desplazamiento del motor a pasos */
@@ -13,3 +15,5 @@ extern void app_Distance(char Eje, uint8_t Distancia, uint8_t Direccion,uint8_t 
 
 /* Variables externas */
 extern uint8_t Alarma;
+
+

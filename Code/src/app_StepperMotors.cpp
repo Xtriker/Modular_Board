@@ -29,9 +29,15 @@ DigitalOut Enable(Enable_PIN);
 /* Un estado de 0 los habilita, un estado de 1 los desabilita */
 DigitalOut Reset(Reset_PIN);
 
-/* Variables globales */
+/* Indicadores del movimiento */
 DigitalOut Rojo(LED1);
-int Contador_distancia = 0;
+DigitalOut Verde(LED2);
+
+
+/* Variables globales */
+
+
+int Contador_distancia_X = 0, Contador_distancia_Y = 0;
     
 
 /*Declaración de las funciones */
@@ -59,23 +65,29 @@ int app_Encoder(void)
 
 void app_Distance(char Eje, uint8_t Distancia,uint8_t Direccion,uint8_t Tiempo)
 {
-    
+    /* Curva de calibracion de los milimetros a pulsos */
+    uint16_t Pulsos = (3.3*Distancia)-0.0000000000000227373675443232;
     switch(Eje)
     {
         case 'X' | 'x':
         {
-            
-            if (Contador_distancia == Distancia)
+            if(Alarma == true)
+            {
+                /* Desabilito el driver */
+                Enable.write(1);
+                /* Mando el driver a reset */
+                Reset.write(0); 
+            }
+            else if (Contador_distancia_X == Pulsos)
             {
                 
                 /* Desabilito el driver */
                 Enable.write(1);
                 /* Mando el driver a reset */
                 Reset.write(0);
-                /* Imprime el valor de la distancia */
-                com.printf("X = %d",Contador_distancia);
+                
             }
-            else
+            else if(Contador_distancia_X < Pulsos)
             {
                 
                 /* Habilito el driver */
@@ -93,16 +105,56 @@ void app_Distance(char Eje, uint8_t Distancia,uint8_t Direccion,uint8_t Tiempo)
                 Step_X.write(0);
                 Rojo.write(true);
                 wait_ms(Tiempo);
-                Contador_distancia = Contador_distancia + 1;
-                com.printf("%d",Contador_distancia);
+                Contador_distancia_X = Contador_distancia_X + 1;
+                com.printf("Pulsos %d Contador %d",Distancia,Contador_distancia_X);
             }
 
         }
         break;
         case 'Y' | 'y':
         {
+             if(Alarma == true)
+            {
+                /* Desabilito el driver */
+                Enable.write(1);
+                /* Mando el driver a reset */
+                Reset.write(0); 
+                /* Imprime mensaje */
+                com.printf("Alarma: Y%d \n \r",Contador_distancia_Y);
+                
+            }
+             if (Contador_distancia_Y == Pulsos)
+            {
+                /* Desabilito el driver */
+                Enable.write(1);
+                /* Mando el driver a reset */
+                Reset.write(0);
+            }
+            else if((Contador_distancia_Y < Pulsos) && (Alarma == false))
+            {
+                
+                /* Habilito el driver */
+                Enable.write(0);
+                /* Reset desactivado */
+                Reset.write(1);
+                /*Coloca el sentido de giro del motor */
+                Direction_Y1 = Direccion;
+                Direction_Y2 = Direccion;
+                /* Envio un bit */
+                Step_Y1.write(1);
+                Step_Y2.write(1);
+                Verde.write(false);
+                /*Seleciona la frecuencia de movimiento */
+                /* Frecuencia de 500Hz */
+                wait_ms(Tiempo);
+                Step_Y1.write(0);
+                Step_Y2.write(0);
+                Verde.write(true);
+                wait_ms(Tiempo);
+                Contador_distancia_Y = Contador_distancia_Y + 1;
+            }
             
         }
+        break;
     }
-    
 }
