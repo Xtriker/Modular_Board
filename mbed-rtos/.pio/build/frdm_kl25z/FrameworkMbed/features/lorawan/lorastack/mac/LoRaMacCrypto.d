@@ -1,0 +1,20 @@
+.pio/build/frdm_kl25z/FrameworkMbed/features/lorawan/lorastack/mac/LoRaMacCrypto.o: \
+ /home/dario/.platformio/packages/framework-mbed/features/lorawan/lorastack/mac/LoRaMacCrypto.cpp \
+ .pio/build/frdm_kl25z/mbed_config.h \
+ /home/dario/.platformio/packages/framework-mbed/features/lorawan/lorastack/mac/LoRaMacCrypto.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/inc/mbedtls/config.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/platform/inc/platform_mbed.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/inc/mbedtls/config-no-entropy.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/inc/mbedtls/check_config.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/mbed-crypto/inc/mbedtls/aes.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/mbed-crypto/inc/mbedtls/cmac.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/mbed-crypto/inc/mbedtls/cipher.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/mbed-crypto/inc/mbedtls/platform_util.h \
+ /home/dario/.platformio/packages/framework-mbed/features/lorawan/system/lorawan_data_structures.h \
+ /home/dario/.platformio/packages/framework-mbed/features/lorawan/lorawan_types.h \
+ /home/dario/.platformio/packages/framework-mbed/platform/Callback.h \
+ /home/dario/.platformio/packages/framework-mbed/platform/mbed_assert.h \
+ /home/dario/.platformio/packages/framework-mbed/platform/mbed_toolchain.h \
+ /home/dario/.platformio/packages/framework-mbed/platform/mbed_preprocessor.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/mbed-crypto/inc/mbedtls/platform.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/mbed-crypto/inc/mbedtls/platform_time.h

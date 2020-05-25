@@ -1,0 +1,21 @@
+.pio/build/frdm_kl25z/FrameworkMbed/features/lorawan/system/LoRaWANTimer.o: \
+ /home/dario/.platformio/packages/framework-mbed/features/lorawan/system/LoRaWANTimer.cpp \
+ .pio/build/frdm_kl25z/mbed_config.h \
+ /home/dario/.platformio/packages/framework-mbed/features/lorawan/system/LoRaWANTimer.h \
+ /home/dario/.platformio/packages/framework-mbed/events/EventQueue.h \
+ /home/dario/.platformio/packages/framework-mbed/events/equeue.h \
+ /home/dario/.platformio/packages/framework-mbed/events/internal/equeue_platform.h \
+ /home/dario/.platformio/packages/framework-mbed/rtos/source/TARGET_CORTEX/rtx5/Include/cmsis_os2.h \
+ /home/dario/.platformio/packages/framework-mbed/rtos/mbed_rtos_storage.h \
+ /home/dario/.platformio/packages/framework-mbed/rtos/source/TARGET_CORTEX/mbed_rtx_storage.h \
+ /home/dario/.platformio/packages/framework-mbed/rtos/source/TARGET_CORTEX/rtx5/RTX/Include/rtx_os.h \
+ /home/dario/.platformio/packages/framework-mbed/rtos/source/TARGET_CORTEX/mbed_rtx_conf.h \
+ /home/dario/.platformio/packages/framework-mbed/targets/TARGET_Freescale/mbed_rtx.h \
+ /home/dario/.platformio/packages/framework-mbed/platform/Callback.h \
+ /home/dario/.platformio/packages/framework-mbed/platform/mbed_assert.h \
+ /home/dario/.platformio/packages/framework-mbed/platform/mbed_toolchain.h \
+ /home/dario/.platformio/packages/framework-mbed/platform/mbed_preprocessor.h \
+ /home/dario/.platformio/packages/framework-mbed/platform/NonCopyable.h \
+ /home/dario/.platformio/packages/framework-mbed/platform/mbed_debug.h \
+ /home/dario/.platformio/packages/framework-mbed/features/lorawan/system/lorawan_data_structures.h \
+ /home/dario/.platformio/packages/framework-mbed/features/lorawan/lorawan_types.h

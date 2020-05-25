@@ -1,0 +1,30 @@
+.pio/build/frdm_kl25z/FrameworkMbed/features/mbedtls/src/error.o: \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/src/error.c \
+ .pio/build/frdm_kl25z/mbed_config.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/inc/mbedtls/config.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/platform/inc/platform_mbed.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/inc/mbedtls/config-no-entropy.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/inc/mbedtls/check_config.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/inc/mbedtls/error.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/mbed-crypto/inc/mbedtls/platform.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/mbed-crypto/inc/mbedtls/platform_time.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/mbed-crypto/inc/mbedtls/aes.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/mbed-crypto/inc/mbedtls/base64.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/mbed-crypto/inc/mbedtls/bignum.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/mbed-crypto/inc/mbedtls/ccm.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/mbed-crypto/inc/mbedtls/cipher.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/mbed-crypto/inc/mbedtls/platform_util.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/mbed-crypto/inc/mbedtls/cmac.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/mbed-crypto/inc/mbedtls/ecp.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/mbed-crypto/inc/mbedtls/gcm.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/mbed-crypto/inc/mbedtls/hmac_drbg.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/mbed-crypto/inc/mbedtls/md.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/mbed-crypto/inc/mbedtls/oid.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/mbed-crypto/inc/mbedtls/asn1.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/mbed-crypto/inc/mbedtls/pk.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/mbed-crypto/inc/mbedtls/rsa.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/mbed-crypto/inc/mbedtls/ecdsa.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/mbed-crypto/inc/mbedtls/pem.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/mbed-crypto/inc/mbedtls/sha256.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/mbed-crypto/inc/mbedtls/sha512.h \
+ /home/dario/.platformio/packages/framework-mbed/features/mbedtls/inc/mbedtls/x509.h

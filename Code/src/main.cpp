@@ -1,7 +1,6 @@
 
-#include "mbed.h"
-#include "platform/mbed_thread.h"
-#include "Librerias.h"
+
+#include "Aplicaciones/Librerias.h"
 
 
 /* Comunicacion serial */

@@ -1,0 +1,19 @@
+.pio/build/frdm_kl25z/FrameworkMbed/drivers/source/usb/USBDevice.o: \
+ /home/dario/.platformio/packages/framework-mbed/drivers/source/usb/USBDevice.cpp \
+ .pio/build/frdm_kl25z/mbed_config.h \
+ /home/dario/.platformio/packages/framework-mbed/drivers/internal/USBDevice.h \
+ /home/dario/.platformio/packages/framework-mbed/drivers/internal/USBDevice_Types.h \
+ /home/dario/.platformio/packages/framework-mbed/hal/usb/USBPhy.h \
+ /home/dario/.platformio/packages/framework-mbed/hal/usb/USBPhyTypes.h \
+ /home/dario/.platformio/packages/framework-mbed/hal/usb/USBPhyEvents.h \
+ /home/dario/.platformio/packages/framework-mbed/platform/mbed_critical.h \
+ /home/dario/.platformio/packages/framework-mbed/platform/Callback.h \
+ /home/dario/.platformio/packages/framework-mbed/platform/mbed_assert.h \
+ /home/dario/.platformio/packages/framework-mbed/platform/mbed_toolchain.h \
+ /home/dario/.platformio/packages/framework-mbed/platform/mbed_preprocessor.h \
+ /home/dario/.platformio/packages/framework-mbed/drivers/internal/USBDescriptor.h \
+ /home/dario/.platformio/packages/framework-mbed/hal/usb/usb_phy_api.h \
+ /home/dario/.platformio/packages/framework-mbed/hal/usb/USBPhy.h \
+ /home/dario/.platformio/packages/framework-mbed/platform/mbed_assert.h \
+ /home/dario/.platformio/packages/framework-mbed/platform/mbed_error.h \
+ /home/dario/.platformio/packages/framework-mbed/platform/mbed_retarget.h
