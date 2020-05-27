@@ -1,5 +1,3 @@
-
-
 #include "Aplicaciones/Librerias.h"
 
 
@@ -13,12 +11,10 @@ Serial pc(USBTX, USBRX,115200);
 
 
 int main()
-{   
-    //app_StepperMotorInitialState();   
-    pc.printf("Movimiento del motor X");
+{     
     while (true) {
         //app_Distance('x',2,Izquierda,(uint8_t)2);
         app_Endstop();
-        app_Distance('y',100,Izquierda,(uint8_t)2);
+        app_Distance('y',330,Derecha,(uint8_t)2);
     }
 }

@@ -1,8 +1,10 @@
 #include "app_Endstops.h"
 
 /* Declaración de funciones */
-uint8_t Alarma;
+volatile uint8_t Alarma;
 /* Declaración de bits de entrada de los finales de carrera */
+
+
 
 DigitalIn endX1(Endstop_X1);
 DigitalIn endX2(Endstop_X2);
@@ -16,12 +18,13 @@ void app_InEndstops(void)
 }
 void app_Endstop(void)
 {
-    if(endY1 == false)
+    
+    if((endY1 == false) || (endY2 == false))
     {
-        Alarma = true;
+        Alarma = 1;
     }
-    else
+    else if((endX1 == false) || (endX2 == false))
     {
-        Alarma = false;
+        Alarma = 1;
     }
 }

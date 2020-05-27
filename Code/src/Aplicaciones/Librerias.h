@@ -2,6 +2,5 @@
 #include "app_StepperMotors.h"
 #include "app_Endstops.h"
 #include "Puertos.h"
-#include "rtos.h"
 #include "mbed.h"
 #include "platform/mbed_thread.h"
