@@ -12,9 +12,9 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug",
-            "executable": "d:/Modular/Modular_Board/mbed-rtos/.pio/build/frdm_kl25z/firmware.elf",
-            "toolchainBinDir": "C:/Users/Dario/.platformio/packages/toolchain-gccarmnoneeabi/bin",
-            "svdPath": "C:/Users/Dario/.platformio/platforms/freescalekinetis/misc/svd/MKL25Z4.svd",
+            "executable": "/home/dario/Modular_Board/mbed-rtos/.pio/build/frdm_kl25z/firmware.elf",
+            "toolchainBinDir": "/home/dario/.platformio/packages/toolchain-gccarmnoneeabi/bin",
+            "svdPath": "/home/dario/.platformio/platforms/freescalekinetis/misc/svd/MKL25Z4.svd",
             "preLaunchTask": {
                 "type": "PlatformIO",
                 "task": "Pre-Debug"
@@ -25,9 +25,9 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (skip Pre-Debug)",
-            "executable": "d:/Modular/Modular_Board/mbed-rtos/.pio/build/frdm_kl25z/firmware.elf",
-            "toolchainBinDir": "C:/Users/Dario/.platformio/packages/toolchain-gccarmnoneeabi/bin",
-            "svdPath": "C:/Users/Dario/.platformio/platforms/freescalekinetis/misc/svd/MKL25Z4.svd",
+            "executable": "/home/dario/Modular_Board/mbed-rtos/.pio/build/frdm_kl25z/firmware.elf",
+            "toolchainBinDir": "/home/dario/.platformio/packages/toolchain-gccarmnoneeabi/bin",
+            "svdPath": "/home/dario/.platformio/platforms/freescalekinetis/misc/svd/MKL25Z4.svd",
             "internalConsoleOptions": "openOnSessionStart"
         }
     ]
