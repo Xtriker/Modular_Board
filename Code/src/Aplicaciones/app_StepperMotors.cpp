@@ -70,7 +70,16 @@ int app_Encoder(void)
 void app_Distance(char Eje, uint8_t Distancia,uint8_t Direccion,uint8_t Tiempo)
 {
     /* Curva de calibracion de los milimetros a pulsos */
-    uint16_t Pulsos = (3.3*Distancia)-0.0000000000000227373675443232;
+    uint16_t Pulsos[1];
+    volatile uint8_t i;
+    if(i > 2)
+    {
+        i = 0;
+    }
+    else
+    {
+        Pulsos[i] = (3.3*Distancia)-0.0000000000000227373675443232;
+    }
     switch(Eje)
     {
         case 'X' | 'x':
@@ -79,14 +88,14 @@ void app_Distance(char Eje, uint8_t Distancia,uint8_t Direccion,uint8_t Tiempo)
             {
                 case NORMAL:
                 {
-                    if (Contador_distancia_X == Pulsos)
+                    if ((Contador_distancia_Y == Pulsos[0]) && (Contador_distancia_X == Pulsos[1]))
                     { 
                         /* Desabilito el driver */
                         Enable.write(1);
                         /* Mando el driver a reset */
                         Reset.write(0);   
                     }
-                    else if(Contador_distancia_X < Pulsos)
+                    else if(Contador_distancia_X < Pulsos[i])
                     {
                         
                         /* Habilito el driver */
@@ -106,12 +115,14 @@ void app_Distance(char Eje, uint8_t Distancia,uint8_t Direccion,uint8_t Tiempo)
                         wait_ms(Tiempo);
                         Contador_distancia_X = Contador_distancia_X + 1;
                         com.printf("Pulsos %d Contador %d",Distancia,Contador_distancia_X);
+                        i = i + 1;
                     }
                 }
                 break;
                 case PARO:
                 {
                     Alarma = PARO;
+                    Tiempo = 0;
                     /* Desabilito el driver */
                     Enable.write(1);
                     /* Mando el driver a reset */
@@ -130,53 +141,67 @@ void app_Distance(char Eje, uint8_t Distancia,uint8_t Direccion,uint8_t Tiempo)
         break;
         case 'Y' | 'y':
         {
-             if(Alarma == true)
+             switch (Alarma)
             {
-                /* Desabilito el driver */
-                Enable.write(1);
-                /* Mando el driver a reset */
-                Reset.write(0); 
-                /* Imprime mensaje */
-                com.printf("Alarma: Y%d \n \r",Contador_distancia_Y);
-                
-            }
-             if (Contador_distancia_Y == Pulsos)
-            {
-                /* Desabilito el driver */
-                Enable.write(1);
-                /* Mando el driver a reset */
-                Reset.write(0);
-            }
-            else if((Contador_distancia_Y < Pulsos) && (Alarma == false))
-            {
-                
-                /* Habilito el driver */
-                Enable.write(0);
-                /* Reset desactivado */
-                Reset.write(1);
-                /*Coloca el sentido de giro del motor */
-                Direction_Y1 = Direccion;
-                Direction_Y2 = Direccion;
-                /* Envio un bit */
-                Step_Y1.write(1);
-                Step_Y2.write(1);
-                Verde.write(false);
-                /*Seleciona la frecuencia de movimiento */
-                /* Frecuencia de 500Hz */
-                wait_ms(Tiempo);
-                Step_Y1.write(0);
-                Step_Y2.write(0);
-                Verde.write(true);
-                wait_ms(Tiempo);
-                Contador_distancia_Y = Contador_distancia_Y + 1;
-            }
-            
+                case NORMAL:
+                {
+                    if ((Contador_distancia_Y == Pulsos[0]) && (Contador_distancia_X == Pulsos[1]))
+                    { 
+                        /* Desabilito el driver */
+                        Enable.write(1);
+                        /* Mando el driver a reset */
+                        Reset.write(0);   
+                    }
+                    else if(Contador_distancia_Y < Pulsos[i])
+                    {
+                        
+                        /* Habilito el driver */
+                        Enable.write(0);
+                        /* Reset desactivado */
+                        Reset.write(1);
+                        /*Coloca el sentido de giro del motor */
+                        Direction_Y1 = Direccion;
+                        Direction_Y2 = Direccion;
+                        /* Envio un bit */
+                        Step_Y1.write(1);
+                        Step_Y2.write(1);
+                        Verde.write(false);
+                        /*Seleciona la frecuencia de movimiento */
+                        /* Frecuencia de 500Hz */
+                        wait_ms(Tiempo);
+                        Step_Y1.write(0);
+                        Step_Y2.write(0);
+                        Verde.write(true);
+                        wait_ms(Tiempo);
+                        Contador_distancia_Y = Contador_distancia_Y + 1;
+                        com.printf("Pulsos %d Contador %d",Distancia,Contador_distancia_Y);
+                        i = i + 1;
+                    }
+                }
+                break;
+                case PARO:
+                {
+                    Alarma = PARO;
+                    /* Desabilito el driver */
+                    Enable.write(1);
+                    /* Mando el driver a reset */
+                    Reset.write(0); 
+                    Tiempo = 0;
+                }
+                break;
+                case REINICIO:
+                {
+                    /* Mando el driver a reset */
+                    Reset.write(0); 
+                }
+                break;
+                default:
+                {}  
+            } 
         }
         break;
+        default:
+        {}
     }
-}
-
-void app_StepperMotorOrigin(void)
-{
     
 }

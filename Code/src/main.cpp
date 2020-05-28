@@ -13,8 +13,9 @@ Serial pc(USBTX, USBRX,115200);
 int main()
 {     
     while (true) {
-        //app_Distance('x',2,Izquierda,(uint8_t)2);
         app_Endstop();
-        app_Distance('y',330,Derecha,(uint8_t)2);
+        wait_us(5);
+        app_Distance('x',330,Derecha,(uint8_t)2);
+        app_Distance('y',100,Izquierda,(uint8_t)2);
     }
 }
