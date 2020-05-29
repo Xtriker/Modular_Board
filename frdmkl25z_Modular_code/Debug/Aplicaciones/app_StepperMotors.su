@@ -1,0 +1,4 @@
+fsl_gpio.h:157:20:GPIO_WritePinOutput	24	static
+fsl_gpio.h:197:20:GPIO_TogglePinsOutput	16	static
+app_StepperMotors.c:11:6:app_StepperMotorInitialState	8	static
+app_StepperMotors.c:25:6:app_Distance	32	static

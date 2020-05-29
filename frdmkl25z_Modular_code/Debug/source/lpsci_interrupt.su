@@ -1,0 +1,7 @@
+core_cm0plus.h:745:22:NVIC_EnableIRQ	16	static
+fsl_clock.h:620:20:CLOCK_SetLpsci0Clock	16	static
+fsl_common.h:212:20:EnableIRQ	16	static
+fsl_lpsci.h:502:20:LPSCI_WriteByte	16	static
+fsl_lpsci.h:516:23:LPSCI_ReadByte	16	static
+lpsci_interrupt.c:81:6:UART0_IRQHandler	24	static
+lpsci_interrupt.c:103:5:main	16	static
