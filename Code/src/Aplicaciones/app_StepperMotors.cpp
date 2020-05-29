@@ -42,7 +42,6 @@ enum S_Endstop{
 };
 
 int Contador_distancia_X = 0, Contador_distancia_Y = 0;
-    
 
 /*Declaración de las funciones */
 
@@ -69,16 +68,22 @@ int app_Encoder(void)
 
 void app_Distance(char Eje, uint8_t Distancia,uint8_t Direccion,uint8_t Tiempo)
 {
+    parametros_movimiento par_mov;
     /* Curva de calibracion de los milimetros a pulsos */
-    uint16_t Pulsos[1];
-    volatile uint8_t i;
-    if(i > 2)
+    static uint16_t Pulsos[1] = {0} mm[1] = {0};
+    static uint8_t i = 0;
+    if(i > 1)
     {
         i = 0;
     }
     else
     {
-        Pulsos[i] = (3.3*Distancia)-0.0000000000000227373675443232;
+        /* Antigua ecuacion de curva de calibracion */
+        //Pulsos[i] = (3.3*Distancia)-0.0000000000000227373675443232;
+        /* Nueva formula para calcular los pasos que debera de llaver la maquina */
+        /* La variable distancia son los mm a colocar */
+        Pulsos[i] = (Steps_rev * Distancia) / mm_rev;
+        mm[i] = (mm_rev * Pulsos[i]) / Steps_rev;
     }
     switch(Eje)
     {
@@ -114,7 +119,7 @@ void app_Distance(char Eje, uint8_t Distancia,uint8_t Direccion,uint8_t Tiempo)
                         Rojo.write(true);
                         wait_ms(Tiempo);
                         Contador_distancia_X = Contador_distancia_X + 1;
-                        com.printf("Pulsos %d Contador %d",Distancia,Contador_distancia_X);
+                        com.printf("X%d ",par_mov.Direccion[0]);
                         i = i + 1;
                     }
                 }
@@ -174,7 +179,7 @@ void app_Distance(char Eje, uint8_t Distancia,uint8_t Direccion,uint8_t Tiempo)
                         Verde.write(true);
                         wait_ms(Tiempo);
                         Contador_distancia_Y = Contador_distancia_Y + 1;
-                        com.printf("Pulsos %d Contador %d",Distancia,Contador_distancia_Y);
+                        com.printf("Y%d \n \r",par_mov.Direccion[1]);
                         i = i + 1;
                     }
                 }

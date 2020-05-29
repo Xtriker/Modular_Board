@@ -1,6 +1,7 @@
 #include "mbed.h"
 #include "Puertos.h"
 #include "app_Endstops.h"
+#include "Macros.h"
 
 /* Definiciones */
 /* Direcion de desplazamiento del motor a pasos */

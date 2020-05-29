@@ -15,7 +15,7 @@ int main()
     while (true) {
         app_Endstop();
         wait_us(5);
-        app_Distance('x',330,Derecha,(uint8_t)2);
-        app_Distance('y',100,Izquierda,(uint8_t)2);
+        app_Distance('x',20,Derecha,(uint8_t)2);
+        app_Distance('y',60,Izquierda,(uint8_t)2);
     }
 }
